@@ -5,13 +5,13 @@
 	$country = $_POST['country'];
 	$website = $_POST['website'];
 	$header = 'From: Chris'; 
-    $to = 'myemail@mydomain.com'; 
+    $to = 'someemail@somedomain'; 
     $subject = 'PHP HoneyPot Test';
 
     $body = "From: $name\n Age: $age\n Country: $country";
 
 
-	if(isset($_POST['submit'])) {
+	if(!empty($_POST)) {
 		if($website != ""){
 			echo "You are a bot!";
 			return false;
